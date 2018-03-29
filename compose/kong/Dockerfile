@@ -1,5 +1,7 @@
 FROM kong
 
+COPY rate-limiting/* /usr/local/share/lua/5.1/kong/plugins/rate-limiting/
+
 # get ContainerPilot release
 ENV CONTAINERPILOT_VERSION 2.7.2
 RUN export CP_SHA1=e886899467ced6d7c76027d58c7f7554c2fb2bcc \
